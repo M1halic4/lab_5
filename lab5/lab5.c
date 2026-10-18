@@ -11,15 +11,12 @@ int task1();
 int task2();
 int task3a();
 int task3b();
-double f(double x, double y);
 
 int main()
 {
 	setlocale(LC_ALL, "RUS");
-	double x, y;
-	scanf("%lf %lf", &x, &y);
-	double result = f(x, y);
-	printf("%f", result);
+
+	task3b();
 
 	return 0;
 }
@@ -90,12 +87,4 @@ int task3b()
 	printf("Условие выполнено (1 - да, 0 - нет) %d", ((a % 3) + (b % 3) + (c % 3)) == 0);
 
 	return 0;
-}
-
-double f(double x, double y)
-{
-	double left = log(x);
-	double right = sin(y);
-	double all = (left + right) / pow((x + y), 0.5);
-	return all;
 }
